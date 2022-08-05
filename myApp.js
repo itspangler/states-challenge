@@ -174,7 +174,7 @@ function getStateMap (name) {
         let mapsLabel = document.querySelector('.mapsLabel');
         let totalResults = response.response.docs.length;
         let randomImg = Math.floor(Math.random() * totalResults);
-        let urlSmall = "https://iiif.digitalcommonwealth.org/iiif/2/" + response.response.docs[randomImg].exemplary_image_ssi + "/full/!500,500/0/default.jpg";
+        let urlSmall = "https://iiif.digitalcommonwealth.org/iiif/2/" + response.response.docs[randomImg].exemplary_image_ssi + "/full/!600,600/0/default.jpg";
         let url = "https://iiif.digitalcommonwealth.org/iiif/2/" + response.response.docs[randomImg].exemplary_image_ssi + "/full/full/0/default.jpg";
         mapImg.src = urlSmall;
 
