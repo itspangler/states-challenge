@@ -1,159 +1,1092 @@
-// The states object
-let states = [
+// The towns object
+let towns = [
   {
-    name: 'alabama'
+    "name": "abington"
   },
   {
-    name: 'alaska'
+    "name": "acton"
   },
   {
-    name: 'arizona'
+    "name": "acushnet"
   },
   {
-    name: 'arkansas'
+    "name": "adams"
   },
   {
-    name: 'california'
+    "name": "agawam"
   },
   {
-    name: 'colorado'
+    "name": "alford"
   },
   {
-    name: 'connecticut'
+    "name": "amesbury"
   },
   {
-    name: 'delaware'
+    "name": "amherst"
   },
   {
-    name: 'florida'
+    "name": "andover"
   },
   {
-    name: 'georgia'
+    "name": "aquinnah"
   },
   {
-    name: 'hawaii'
+    "name": "arlington"
   },
   {
-    name: 'idaho'
+    "name": "ashburnham"
   },
   {
-    name: 'illinois'
+    "name": "ashby"
   },
   {
-    name: 'indiana'
+    "name": "ashfield"
   },
   {
-    name: 'iowa'
+    "name": "ashland"
   },
   {
-    name: 'kansas'
+    "name": "athol"
   },
   {
-    name: 'kentucky'
+    "name": "attleboro"
   },
   {
-    name: 'louisiana'
+    "name": "auburn"
   },
   {
-    name: 'maine'
+    "name": "avon"
   },
   {
-    name: 'maryland'
+    "name": "ayer"
   },
   {
-    name: 'massachusetts'
+    "name": "barnstable"
   },
   {
-    name: 'michigan'
+    "name": "barre"
   },
   {
-    name: 'minnesota'
+    "name": "becket"
   },
   {
-    name: 'mississippi'
+    "name": "bedford"
   },
   {
-    name: 'missouri'
+    "name": "belchertown"
   },
   {
-    name: 'montana'
+    "name": "bellingham"
   },
   {
-    name: 'nebraska'
+    "name": "belmont"
   },
   {
-    name: 'nevada'
+    "name": "berkley"
   },
   {
-    name: 'new hampshire'
+    "name": "berlin"
   },
   {
-    name: 'new jersey'
+    "name": "bernardston"
   },
   {
-    name: 'new mexico'
+    "name": "beverly"
   },
   {
-    name: 'new york'
+    "name": "billerica"
   },
   {
-    name: 'north carolina'
+    "name": "blackstone"
   },
   {
-    name: 'north dakota'
+    "name": "blandford"
   },
   {
-    name: 'ohio'
+    "name": "bolton"
   },
   {
-    name: 'oklahoma'
+    "name": "boston"
   },
   {
-    name: 'oregon'
+    "name": "bourne"
   },
   {
-    name: 'pennsylvania'
+    "name": "boxborough"
   },
   {
-    name: 'rhode island'
+    "name": "boxford"
   },
   {
-    name: 'south carolina'
+    "name": "boylston"
   },
   {
-    name: 'south dakota'
+    "name": "braintree"
   },
   {
-    name: 'tennessee'
+    "name": "brewster"
   },
   {
-    name: 'texas'
+    "name": "bridgewater"
   },
   {
-    name: 'utah'
+    "name": "brighton"
   },
   {
-    name: 'vermont'
+    "name": "brimfield"
   },
   {
-    name: 'virginia'
+    "name": "brockton"
   },
   {
-    name: 'washington'
+    "name": "brookfield"
   },
   {
-    name: 'west virginia'
+    "name": "brookline"
   },
   {
-    name: 'wisconsin'
+    "name": "buckland"
   },
   {
-    name: 'wyoming'
+    "name": "burlington"
+  },
+  {
+    "name": "cambridge"
+  },
+  {
+    "name": "canton"
+  },
+  {
+    "name": "carlisle"
+  },
+  {
+    "name": "carver"
+  },
+  {
+    "name": "charlemont"
+  },
+  {
+    "name": "charlestown"
+  },
+  {
+    "name": "charlton"
+  },
+  {
+    "name": "chatham"
+  },
+  {
+    "name": "chelmsford"
+  },
+  {
+    "name": "chelsea"
+  },
+  {
+    "name": "cheshire"
+  },
+  {
+    "name": "chester"
+  },
+  {
+    "name": "chesterfield"
+  },
+  {
+    "name": "chicopee"
+  },
+  {
+    "name": "chilmark"
+  },
+  {
+    "name": "clarksburg"
+  },
+  {
+    "name": "clinton"
+  },
+  {
+    "name": "cohasset"
+  },
+  {
+    "name": "colrain"
+  },
+  {
+    "name": "concord"
+  },
+  {
+    "name": "conway"
+  },
+  {
+    "name": "cummington"
+  },
+  {
+    "name": "dalton"
+  },
+  {
+    "name": "dana"
+  },
+  {
+    "name": "danvers"
+  },
+  {
+    "name": "dartmouth"
+  },
+  {
+    "name": "dedham"
+  },
+  {
+    "name": "deerfield"
+  },
+  {
+    "name": "dennis"
+  },
+  {
+    "name": "dighton"
+  },
+  {
+    "name": "douglas"
+  },
+  {
+    "name": "dorchester"
+  },
+  {
+    "name": "dover"
+  },
+  {
+    "name": "dracut"
+  },
+  {
+    "name": "dudley"
+  },
+  {
+    "name": "dunstable"
+  },
+  {
+    "name": "duxbury"
+  },
+  {
+    "name": "east bridgewater"
+  },
+  {
+    "name": "east brookfield"
+  },
+  {
+    "name": "east longmeadow"
+  },
+  {
+    "name": "eastham"
+  },
+  {
+    "name": "easthampton"
+  },
+  {
+    "name": "easton"
+  },
+  {
+    "name": "edgartown"
+  },
+  {
+    "name": "egremont"
+  },
+  {
+    "name": "enfield"
+  },
+  {
+    "name": "erving"
+  },
+  {
+    "name": "essex"
+  },
+  {
+    "name": "everett"
+  },
+  {
+    "name": "fairhaven"
+  },
+  {
+    "name": "fall river"
+  },
+  {
+    "name": "falmouth"
+  },
+  {
+    "name": "fitchburg"
+  },
+  {
+    "name": "florida"
+  },
+  {
+    "name": "foxborough"
+  },
+  {
+    "name": "framingham"
+  },
+  {
+    "name": "franklin"
+  },
+  {
+    "name": "freetown"
+  },
+  {
+    "name": "gardner"
+  },
+  {
+    "name": "georgetown"
+  },
+  {
+    "name": "gill"
+  },
+  {
+    "name": "gloucester"
+  },
+  {
+    "name": "goshen"
+  },
+  {
+    "name": "gosnold"
+  },
+  {
+    "name": "grafton"
+  },
+  {
+    "name": "granby"
+  },
+  {
+    "name": "granville"
+  },
+  {
+    "name": "great barrington"
+  },
+  {
+    "name": "greenfield"
+  },
+  {
+    "name": "greenwich"
+  },
+  {
+    "name": "groton"
+  },
+  {
+    "name": "groveland"
+  },
+  {
+    "name": "hadley"
+  },
+  {
+    "name": "halifax"
+  },
+  {
+    "name": "hamilton"
+  },
+  {
+    "name": "hampden"
+  },
+  {
+    "name": "hancock"
+  },
+  {
+    "name": "hanover"
+  },
+  {
+    "name": "hanson"
+  },
+  {
+    "name": "hardwick"
+  },
+  {
+    "name": "harvard"
+  },
+  {
+    "name": "harwich"
+  },
+  {
+    "name": "hatfield"
+  },
+  {
+    "name": "haverhill"
+  },
+  {
+    "name": "hawley"
+  },
+  {
+    "name": "heath"
+  },
+  {
+    "name": "hingham"
+  },
+  {
+    "name": "hinsdale"
+  },
+  {
+    "name": "holbrook"
+  },
+  {
+    "name": "holden"
+  },
+  {
+    "name": "holland"
+  },
+  {
+    "name": "holliston"
+  },
+  {
+    "name": "holyoke"
+  },
+  {
+    "name": "hopedale"
+  },
+  {
+    "name": "hopkinton"
+  },
+  {
+    "name": "hubbardston"
+  },
+  {
+    "name": "hudson"
+  },
+  {
+    "name": "hull"
+  },
+  {
+    "name": "huntington"
+  },
+  {
+    "name": "hyde park"
+  },
+  {
+    "name": "ipswich"
+  },
+  {
+    "name": "kingston"
+  },
+  {
+    "name": "lakeville"
+  },
+  {
+    "name": "lancaster"
+  },
+  {
+    "name": "lanesborough"
+  },
+  {
+    "name": "lawrence"
+  },
+  {
+    "name": "lee"
+  },
+  {
+    "name": "leicester"
+  },
+  {
+    "name": "lenox"
+  },
+  {
+    "name": "leominster"
+  },
+  {
+    "name": "leverett"
+  },
+  {
+    "name": "lexington"
+  },
+  {
+    "name": "leyden"
+  },
+  {
+    "name": "lincoln"
+  },
+  {
+    "name": "littleton"
+  },
+  {
+    "name": "longmeadow"
+  },
+  {
+    "name": "lowell"
+  },
+  {
+    "name": "ludlow"
+  },
+  {
+    "name": "lunenburg"
+  },
+  {
+    "name": "lynn"
+  },
+  {
+    "name": "lynnfield"
+  },
+  {
+    "name": "malden"
+  },
+  {
+    "name": "manchester-by-the-sea"
+  },
+  {
+    "name": "mansfield"
+  },
+  {
+    "name": "marblehead"
+  },
+  {
+    "name": "marion"
+  },
+  {
+    "name": "marlborough"
+  },
+  {
+    "name": "marshfield"
+  },
+  {
+    "name": "mashpee"
+  },
+  {
+    "name": "mattapoisett"
+  },
+  {
+    "name": "maynard"
+  },
+  {
+    "name": "medfield"
+  },
+  {
+    "name": "medford"
+  },
+  {
+    "name": "medway"
+  },
+  {
+    "name": "melrose"
+  },
+  {
+    "name": "mendon"
+  },
+  {
+    "name": "merrimac"
+  },
+  {
+    "name": "methuen"
+  },
+  {
+    "name": "middleborough"
+  },
+  {
+    "name": "middlefield"
+  },
+  {
+    "name": "middleton"
+  },
+  {
+    "name": "milford"
+  },
+  {
+    "name": "millbury"
+  },
+  {
+    "name": "millis"
+  },
+  {
+    "name": "millville"
+  },
+  {
+    "name": "milton"
+  },
+  {
+    "name": "monroe"
+  },
+  {
+    "name": "monson"
+  },
+  {
+    "name": "montague"
+  },
+  {
+    "name": "monterey"
+  },
+  {
+    "name": "montgomery"
+  },
+  {
+    "name": "mount washington"
+  },
+  {
+    "name": "nahant"
+  },
+  {
+    "name": "nantucket"
+  },
+  {
+    "name": "natick"
+  },
+  {
+    "name": "needham"
+  },
+  {
+    "name": "new ashford"
+  },
+  {
+    "name": "new bedford"
+  },
+  {
+    "name": "new braintree"
+  },
+  {
+    "name": "new marlborough"
+  },
+  {
+    "name": "new salem"
+  },
+  {
+    "name": "newbury"
+  },
+  {
+    "name": "newburyport"
+  },
+  {
+    "name": "newton"
+  },
+  {
+    "name": "norfolk"
+  },
+  {
+    "name": "north adams"
+  },
+  {
+    "name": "north andover"
+  },
+  {
+    "name": "north attleborough"
+  },
+  {
+    "name": "north brookfield"
+  },
+  {
+    "name": "north reading"
+  },
+  {
+    "name": "northampton"
+  },
+  {
+    "name": "northborough"
+  },
+  {
+    "name": "northbridge"
+  },
+  {
+    "name": "northfield"
+  },
+  {
+    "name": "norton"
+  },
+  {
+    "name": "norwell"
+  },
+  {
+    "name": "norwood"
+  },
+  {
+    "name": "oak bluffs"
+  },
+  {
+    "name": "oakham"
+  },
+  {
+    "name": "orange"
+  },
+  {
+    "name": "orleans"
+  },
+  {
+    "name": "otis"
+  },
+  {
+    "name": "oxford"
+  },
+  {
+    "name": "palmer"
+  },
+  {
+    "name": "paxton"
+  },
+  {
+    "name": "peabody"
+  },
+  {
+    "name": "pelham"
+  },
+  {
+    "name": "pembroke"
+  },
+  {
+    "name": "pepperell"
+  },
+  {
+    "name": "peru"
+  },
+  {
+    "name": "petersham"
+  },
+  {
+    "name": "phillipston"
+  },
+  {
+    "name": "pittsfield"
+  },
+  {
+    "name": "plainfield"
+  },
+  {
+    "name": "plainville"
+  },
+  {
+    "name": "plymouth"
+  },
+  {
+    "name": "plympton"
+  },
+  {
+    "name": "prescott"
+  },
+  {
+    "name": "princeton"
+  },
+  {
+    "name": "provincetown"
+  },
+  {
+    "name": "quincy"
+  },
+  {
+    "name": "randolph"
+  },
+  {
+    "name": "raynham"
+  },
+  {
+    "name": "reading"
+  },
+  {
+    "name": "rehoboth"
+  },
+  {
+    "name": "revere"
+  },
+  {
+    "name": "richmond"
+  },
+  {
+    "name": "rochester"
+  },
+  {
+    "name": "rockland"
+  },
+  {
+    "name": "rockport"
+  },
+  {
+    "name": "rowe"
+  },
+  {
+    "name": "rowley"
+  },
+  {
+    "name": "roxbury"
+  },
+  {
+    "name": "royalston"
+  },
+  {
+    "name": "russell"
+  },
+  {
+    "name": "rutland"
+  },
+  {
+    "name": "salem"
+  },
+  {
+    "name": "salisbury"
+  },
+  {
+    "name": "sandisfield"
+  },
+  {
+    "name": "sandwich"
+  },
+  {
+    "name": "saugus"
+  },
+  {
+    "name": "savoy"
+  },
+  {
+    "name": "scituate"
+  },
+  {
+    "name": "seekonk"
+  },
+  {
+    "name": "sharon"
+  },
+  {
+    "name": "sheffield"
+  },
+  {
+    "name": "shelburne"
+  },
+  {
+    "name": "sherborn"
+  },
+  {
+    "name": "shirley"
+  },
+  {
+    "name": "shrewsbury"
+  },
+  {
+    "name": "shutesbury"
+  },
+  {
+    "name": "somerset"
+  },
+  {
+    "name": "somerville"
+  },
+  {
+    "name": "south hadley"
+  },
+  {
+    "name": "southampton"
+  },
+  {
+    "name": "southborough"
+  },
+  {
+    "name": "southbridge"
+  },
+  {
+    "name": "southwick"
+  },
+  {
+    "name": "spencer"
+  },
+  {
+    "name": "springfield"
+  },
+  {
+    "name": "sterling"
+  },
+  {
+    "name": "stockbridge"
+  },
+  {
+    "name": "stoneham"
+  },
+  {
+    "name": "stoughton"
+  },
+  {
+    "name": "stow"
+  },
+  {
+    "name": "sturbridge"
+  },
+  {
+    "name": "sudbury"
+  },
+  {
+    "name": "sunderland"
+  },
+  {
+    "name": "sutton"
+  },
+  {
+    "name": "swampscott"
+  },
+  {
+    "name": "swansea"
+  },
+  {
+    "name": "taunton"
+  },
+  {
+    "name": "templeton"
+  },
+  {
+    "name": "tewksbury"
+  },
+  {
+    "name": "tisbury"
+  },
+  {
+    "name": "tolland"
+  },
+  {
+    "name": "topsfield"
+  },
+  {
+    "name": "townsend"
+  },
+  {
+    "name": "truro"
+  },
+  {
+    "name": "tyngsborough"
+  },
+  {
+    "name": "tyringham"
+  },
+  {
+    "name": "upton"
+  },
+  {
+    "name": "uxbridge"
+  },
+  {
+    "name": "wakefield"
+  },
+  {
+    "name": "wales"
+  },
+  {
+    "name": "walpole"
+  },
+  {
+    "name": "waltham"
+  },
+  {
+    "name": "ware"
+  },
+  {
+    "name": "wareham"
+  },
+  {
+    "name": "warren"
+  },
+  {
+    "name": "warwick"
+  },
+  {
+    "name": "washington"
+  },
+  {
+    "name": "watertown"
+  },
+  {
+    "name": "wayland"
+  },
+  {
+    "name": "webster"
+  },
+  {
+    "name": "wellesley"
+  },
+  {
+    "name": "wellfleet"
+  },
+  {
+    "name": "wendell"
+  },
+  {
+    "name": "wenham"
+  },
+  {
+    "name": "west boylston"
+  },
+  {
+    "name": "west bridgewater"
+  },
+  {
+    "name": "west brookfield"
+  },
+  {
+    "name": "west newbury"
+  },
+  {
+    "name": "west roxbury"
+  },
+  {
+    "name": "west springfield"
+  },
+  {
+    "name": "west stockbridge"
+  },
+  {
+    "name": "west tisbury"
+  },
+  {
+    "name": "westborough"
+  },
+  {
+    "name": "westfield"
+  },
+  {
+    "name": "westford"
+  },
+  {
+    "name": "westhampton"
+  },
+  {
+    "name": "westminster"
+  },
+  {
+    "name": "weston"
+  },
+  {
+    "name": "westport"
+  },
+  {
+    "name": "westwood"
+  },
+  {
+    "name": "weymouth"
+  },
+  {
+    "name": "whately"
+  },
+  {
+    "name": "whitman"
+  },
+  {
+    "name": "wilbraham"
+  },
+  {
+    "name": "williamsburg"
+  },
+  {
+    "name": "williamstown"
+  },
+  {
+    "name": "wilmington"
+  },
+  {
+    "name": "winchendon"
+  },
+  {
+    "name": "winchester"
+  },
+  {
+    "name": "windsor"
+  },
+  {
+    "name": "winthrop"
+  },
+  {
+    "name": "woburn"
+  },
+  {
+    "name": "worcester"
+  },
+  {
+    "name": "worthington"
+  },
+  {
+    "name": "wrentham"
+  },
+  {
+    "name": "yarmouth"
   }
 ];
 
 // Get the relevant elements
-let input = document.querySelector('#state-name');
+let input = document.querySelector('#town-name');
 let btn = document.querySelector('#btn');
 let listContainer = document.querySelector('.list-container');
 let correctList = document.querySelector('#correct-list');
@@ -164,7 +1097,7 @@ let form = document.querySelector('#form');
 let previousCorrect = [];
 let count = 0;
 
-function getStateMap (name) {
+function gettownMap (name) {
   $.ajax({
     url: "https://collections.leventhalmap.org/search.json?per_page=100&q=" + name + "&search_field=exemplary_image_ss",
     type:"Get",
@@ -198,9 +1131,10 @@ function getStateMap (name) {
 }
 
 
-function checkState () {
-  let stateGuess = input.value.toLowerCase();
-  let stateCorrect;
+function checktown () {
+  console.log(input.value);
+  let townGuess = input.value.toLowerCase();
+  let townCorrect;
 
   // If there is currently a notice on the page, remove it
   let notice = document.querySelector('#notice');
@@ -209,17 +1143,17 @@ function checkState () {
     notice.remove();
   }
 
-  // Check the guessed name against the states object
-  states.forEach(function (state, i) {
-    if (stateGuess === state.name) {
-      stateCorrect = stateGuess;
-      stateIsCorrect(stateCorrect);
+  // Check the guessed name against the towns object
+  towns.forEach(function (town, i) {
+    if (townGuess === town.name) {
+      townCorrect = townGuess;
+      townIsCorrect(townCorrect);
     }
     console.log(previousCorrect);
   })
 
-  // If the state doesn't match, provide a notice
-  if (!stateCorrect) {
+  // If the town doesn't match, provide a notice
+  if (!townCorrect) {
 
     // Create a notification
     let notice = document.createElement('div');
@@ -239,7 +1173,7 @@ function checkState () {
         return;
       }
 
-      notice.textContent = 'That is not a state - try again!';
+      notice.textContent = 'That is not a town - try again!';
       notices--;
     }, 1);
 
@@ -250,17 +1184,17 @@ function checkState () {
   input.value = '';
 }
 
-function stateIsCorrect (stateCorrect) {
-  if (!previousCorrect.includes(stateCorrect)) {
+function townIsCorrect (townCorrect) {
+  if (!previousCorrect.includes(townCorrect)) {
     // Add original, lowercase string to array
-    previousCorrect.push(stateCorrect);
+    previousCorrect.push(townCorrect);
 
-    // Call the function to get an image - with stateCorrect as the input
-    getStateMap(stateCorrect);
+    // Call the function to get an image - with townCorrect as the input
+    gettownMap(townCorrect);
 
     // Add to count and display new score
     count++;
-    score.innerHTML = `${count}/50`;
+    score.innerHTML = `${count}/361`;
   } else {
 
     // Create a notification
@@ -283,7 +1217,7 @@ function stateIsCorrect (stateCorrect) {
         return;
       }
 
-      notice.textContent = 'You have already named that state - try again!';
+      notice.textContent = 'You have already named that town - try again!';
       notices--;
     }, 1);
   }
@@ -291,4 +1225,4 @@ function stateIsCorrect (stateCorrect) {
 
 
 // Listen for DOM events
-btn.addEventListener('click', checkState);
+btn.addEventListener('click', checktown);
