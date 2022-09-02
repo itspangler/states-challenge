@@ -1110,6 +1110,10 @@ function gettownMap (name) {
         let urlSmall = "https://iiif.digitalcommonwealth.org/iiif/2/" + response.response.docs[randomImg].exemplary_image_ssi + "/full/!600,600/0/default.jpg";
         let url = "https://iiif.digitalcommonwealth.org/iiif/2/" + response.response.docs[randomImg].exemplary_image_ssi + "/full/full/0/default.jpg";
         mapImg.src = urlSmall;
+        let id = response.response.docs[randomImg].exemplary_image_ssi;
+        let mapName = response.response.docs[randomImg].title_info_alternative_tsim
+        console.log(response.response)
+        backlink = "https://collections.leventhalmap.org/search/" + response.response.docs[randomImg].exemplary_image_ssi
 
         // Capitalise the first letter of each word
         let wordsName = name.split(' ');
@@ -1132,7 +1136,6 @@ function gettownMap (name) {
 
 
 function checktown () {
-  console.log(input.value);
   let townGuess = input.value.toLowerCase();
   let townCorrect;
 
@@ -1149,7 +1152,7 @@ function checktown () {
       townCorrect = townGuess;
       townIsCorrect(townCorrect);
     }
-    console.log(previousCorrect);
+    // console.log(previousCorrect);
   })
 
   // If the town doesn't match, provide a notice
@@ -1165,7 +1168,7 @@ function checktown () {
     form.append(notice);
 
     let notices = document.querySelectorAll('#notice').length;
-    console.log(notices);
+    // console.log(notices);
 
     // Add text after it's in the UI
     setTimeout(function () {
@@ -1209,7 +1212,7 @@ function townIsCorrect (townCorrect) {
     form.append(notice);
 
     let notices = document.querySelectorAll('#notice').length;
-    console.log(notices);
+    // console.log(notices);
 
     // Add text after it's in the UI
     setTimeout(function () {
